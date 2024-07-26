@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .image-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .paragraph-container {
+            margin-top: 20px;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            z-index: 10;
+            font-size: 22px;
+        }
+
+        .form-overlay {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            width: 200px;
+            /* Adjust width of the form */
+            height: 200px;
+            /* Adjust height of the form */
+            background-color: white;
+            /* Semi-transparent background */
+            color: white;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .form-overlay form {
+            width: 100%;
+        }
+
+        .form-overlay label {
+            margin-bottom: 5px;
+        }
+
+        .form-overlay input,
+        .form-overlay button {
+            width: calc(100% - 20px);
+            /* Adjust width of input and button */
+            margin-bottom: 5px;
+        }
+
+        .btn-rounded {
+            border-radius: 50px;
+            /* Adjust the value to make the button more or less oval */
+        }
+
+        /* Ensure white background for specific sections */
+        .bg-light {
+            background-color: white !important;
+            /* Ensure background is white */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* semi-transparent background */
+            padding: 10px 0;
+            z-index: 100;
+            /* ensure navbar is above image */
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+           
+        }
+        .image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+    padding: 20px;
+}
+
+.centered-text {
+    max-width: 80%; /* Limit width of paragraph container */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.image-overlay p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- First Div: Single Image -->
+        <div>
+            <div class=" image-container">
+                <img src="img/img9.jpg" alt="Image">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="image-overlay">
+                    <p style="margin-bottom: 0px; font-size: 20px; font-weight: bold;">Let us Find Your Special Apartment</p>
+                    <!-- <p style="margin-bottom: 2px;font-size: 25px;font-weight: bold;">Special Apartment</p> -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center" style="min-height: 10vh;">
+                    <h4>Available Properties</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique cumque, alias
+                        praesentium nemo libero!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logos Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center" style="min-height: 4vh;">
+                    <img src="img/img15.png" alt="Logo 1" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Second Div: Grid of Images -->
+        <div class="image-container">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img1.jpg" alt="Image 1" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img2 (1).jpg" alt="Image 2" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img3.jpg" alt="Image 3" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img4.jpg" alt="Image 4" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img5.jpg" alt="Image 5" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img6.jpg" alt="Image 6" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img7.jpg" alt="Image 7" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img src="img/img8.jpg" alt="Image 8" class="img-fluid">
+                        <h6>Novin</h6>
+                        <h5>$ 1,440 +mo.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center" style="min-height: 10vh;">
+                    <button type="button" class="btn btn-danger btn-rounded" data-mdb-ripple-init>See all
+                        Properties</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Div: Single Image -->
+        <div class=" image-container">
+            <div class="col-12">
+                <img src="img/img10.jpg" alt="Third Image" class="img-fluid">
+                <div class="image-overlay">
+                    <p style="margin-bottom: 2px; font-size: 20px;">Do not miss Our Special Offer</p>
+                    <!-- <p style="margin-bottom: 2px; font-size: 20px;">Our Special Offer</p> -->
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Button Section -->
+
+
+        <!-- Features Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center" style="min-height: 10vh;">
+                    <h4>Our Features</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique cumque, alias
+                        praesentium nemo libero!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logos Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center" style="min-height: 4vh;">
+                    <img src="img/img15.png" alt="Logo 1" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Blocks Section -->
+        <div class="container px-4">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="p-3 bg-light">
+                        <h4>Moneyback Guarantee</h4>
+                        <img src="img/img13.jpg" alt="Logo 1" class="img-fluid">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac neque </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-light">
+                        <h4>Good Neighbours</h4>
+                        <img src="img/img12.jpg" alt="Logo 2" class="img-fluid" style="height: 50px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac neque </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container px-4">
+            <div class="row gx-5">
+                <div class="col-md-6">
+                    <div class="p-3 bg-light">
+                        <h4>Newest Security System</h4>
+                        <img src="img/img14.jpg" alt="Logo 3" class="img-fluid" style="height: 50px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac neque </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 bg-light">
+                        <h4>Health & Social Care</h4>
+                        <img src="img/img11.jpg" alt="Logo 4" class="img-fluid " style="height: 50px;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac neque </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center" style="min-height: 10vh;">
+                    <h4>Testimonials</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique cumque, alias
+                        praesentium nemo libero!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-center" style="min-height: 4vh;">
+                <img src="img/img15.png" alt="Logo 1" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
